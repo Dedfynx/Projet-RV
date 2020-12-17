@@ -32,4 +32,18 @@ public class TPscript : MonoBehaviour
         }
 
     }
+
+
+   	void OnTriggerStay(Collider other){
+        if(other.gameObject.tag == "MovingPlatform"){
+             transform.parent = other.transform;
+ 
+        }
+    }
+ 
+ 	void OnTriggerExit(Collider other){
+     	if(other.gameObject.tag == "MovingPlatform"){
+             transform.parent = null;    
+        }
+    } 
 }
