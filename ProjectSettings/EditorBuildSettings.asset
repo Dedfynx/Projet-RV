@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SceneLab.unity
     guid: 183f229dcf5500047bc7fde17c6f66d6
-  - enabled: 0
-    path: Assets/Niveau 1.unity
-    guid: 480aa6b5f4da1594e8a401e38c0d3415
   - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.4.1/Hello Cardboard/Scenes/HelloCardboard.unity
-    guid: 145a2a45d7bc746b19cb68410368bf96
+    path: Assets/Level1.unity
+    guid: 480aa6b5f4da1594e8a401e38c0d3415
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Level2.unity
+    guid: 4bebd5a9d9ea49a4cb63932a4b536251
+  - enabled: 1
+    path: Assets/Level3.unity
+    guid: 424ebfb122860da48910939163adddee
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f0296ad212410df4a97a7a0e520beb72,
       type: 2}
