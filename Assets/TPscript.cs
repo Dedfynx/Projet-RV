@@ -12,7 +12,7 @@ public class TPscript : MonoBehaviour
     GameObject fin1;
 
     int numNiveau = 1;
-    double ecart = 1.0;
+    double ecart = 3.0;
 
     // Start is called before the first frame update
     void Start()
