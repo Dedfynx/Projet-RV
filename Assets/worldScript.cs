@@ -34,7 +34,7 @@ public class worldScript : MonoBehaviour
 
         StartCoroutine(Fading());
 
-        portail = GameObject.Find("Canvas3D");
+        portail = GameObject.Find("Canvas3D");	
 
         /*
         player.transform.position = spawn.transform.position;

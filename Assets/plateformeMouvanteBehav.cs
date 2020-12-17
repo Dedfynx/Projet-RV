@@ -31,6 +31,7 @@ public class plateformeMouvanteBehav : MonoBehaviour
         }
         else{
             y = 0;
+            aller = !aller;
         }
     }
 }
