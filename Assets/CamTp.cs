@@ -5,13 +5,13 @@ using UnityEngine;
 public class CamTp : MonoBehaviour
 {
 
-    public GameObject Cam;
+    GameObject Cam;
     Transform Pos;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Cam = GameObject.Find("Main Camera");
+        Cam = GameObject.Find("CamParent");
         Pos = gameObject.transform.Find("CamPos");
     }
 

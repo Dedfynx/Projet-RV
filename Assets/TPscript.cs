@@ -7,7 +7,7 @@ public class TPscript : MonoBehaviour
 {
 	GameObject player;
     GameObject spawn;
-    public GameObject cam;
+    GameObject cam;
     GameObject spawncam;
 
     GameObject canvasObj;
@@ -21,7 +21,7 @@ public class TPscript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         spawn = GameObject.Find("SpawnPoint");
-        //cam = GameObject.Find("Main Camera");
+        cam = GameObject.Find("CamParent");
         spawncam = GameObject.Find("SpawnCam");
 
         cam.transform.position = spawncam.transform.position;
@@ -46,18 +46,4 @@ public class TPscript : MonoBehaviour
         }
 
     }
-
-
-   	void OnTriggerStay(Collider other){
-        if(other.gameObject.tag == "MovingPlatform"){
-             transform.parent = other.transform;
- 
-        }
-    }
- 
- 	void OnTriggerExit(Collider other){
-     	if(other.gameObject.tag == "MovingPlatform"){
-             transform.parent = null;    
-        }
-    } 
 }
