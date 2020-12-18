@@ -6,7 +6,7 @@ public class TPscript : MonoBehaviour
 {
 	GameObject player;
     GameObject spawn;
-    GameObject cam;
+    public GameObject cam;
     GameObject spawncam;
 
 
@@ -16,8 +16,10 @@ public class TPscript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         spawn = GameObject.Find("SpawnPoint");
-        cam = GameObject.Find("Main Camera");
+        //cam = GameObject.Find("Main Camera");
         spawncam = GameObject.Find("SpawnCam");
+
+        cam.transform.position = spawncam.transform.position;
 
     }
 
