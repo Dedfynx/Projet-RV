@@ -5,17 +5,20 @@ using UnityEngine;
 public class PlatformAttach : MonoBehaviour
 {
     GameObject Player;
+    GameObject emptyObject;
 
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == Player)
         {
-            Player.transform.parent = transform;
+            emptyObject = new GameObject();
+            emptyObject.transform.parent = transform;
+            Player.transform.parent = emptyObject.transform;
         }
     }
 
@@ -24,6 +27,7 @@ public class PlatformAttach : MonoBehaviour
         if (other.gameObject == Player)
         {
             Player.transform.parent = null;
+            Destroy(emptyObject);
         }
     }
 }
