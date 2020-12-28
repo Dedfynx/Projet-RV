@@ -171,8 +171,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// jump!
 				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
 				m_IsGrounded = false;
-				m_Animator.applyRootMotion = false;
+				m_Animator.applyRootMotion = true;
 				m_GroundCheckDistance = 0.1f;
+			}
+
+			if(jump && !m_IsGrounded){
+				m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_Rigidbody.velocity.y, m_Rigidbody.velocity.z);
 			}
 		}
 
@@ -218,7 +222,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			{
 				m_IsGrounded = false;
 				m_GroundNormal = Vector3.up;
-				m_Animator.applyRootMotion = false;
+				m_Animator.applyRootMotion = true;
 			}
 		}
 	}
